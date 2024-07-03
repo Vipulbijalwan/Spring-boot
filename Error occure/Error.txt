@@ -1,0 +1,83 @@
+
+.....................................................First Error..............................................................
+When it show 16 common frame.
+
+Step 1  Go to Build tool option
+Step 2  Go to rebuild project.And click it.
+
+.....................................................Second Error..............................................................
+
+When the java class in different package .
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-21T11:57:27.876+05:30 ERROR 7176 --- [SpringCoreDemo] [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.SpringCoreDemo.Rest.DemoController required a bean of type 'com.exp.Coach' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.exp.Coach' in your configuration.
+
+
+....................................................Third Error..............................................................
+When you create multiple autowired at single time.
+
+step 1 :-use qualifier When you autowirad it.
+Eg :- interface Coach Extand by different class 
+Track coach
+field coach
+
+
+Description:
+
+Parameter 0 of constructor in com.example.SpringCoreDemo.Rest.DemoController required a single bean, but 4 were found:
+	- baseballCoach: defined in file [C:\Users\hp-admin\Desktop\spring boot\Topics\Lecture 2\Using of Qualifier\SpringCoreDemo\target\classes\com\example\SpringCoreDemo\common\BaseballCoach.class]
+	- cricketCoach: defined in file [C:\Users\hp-admin\Desktop\spring boot\Topics\Lecture 2\Using of Qualifier\SpringCoreDemo\target\classes\com\example\SpringCoreDemo\common\CricketCoach.class]
+	- tennisCoach: defined in file [C:\Users\hp-admin\Desktop\spring boot\Topics\Lecture 2\Using of Qualifier\SpringCoreDemo\target\classes\com\example\SpringCoreDemo\common\TennisCoach.class]
+	- trackCoach: defined in file [C:\Users\hp-admin\Desktop\spring boot\Topics\Lecture 2\Using of Qualifier\SpringCoreDemo\target\classes\com\example\SpringCoreDemo\common\TrackCoach.class]
+
+This may be due to missing parameter name information
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Ensure that your compiler is configured to use the '-parameters' flag.
+You may need to update both your build tool settings as well as your IDE.
+(See https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-6.x#parameter-name-retention)
+
+
+
+
+................................................Forth Error......................................................
+when you not use @Component notation 
+
+Parameter 0 of constructor in com.example.SpringCoreDemo.Rest.DemoController required a bean of type 'com.example.SpringCoreDemo.common.Coach' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Qualifier("swimCoach")
+
+The following candidates were found but could not be injected:
+	- User-defined bean
+	- User-defined bean
+	- User-defined bean
+	- User-defined bean
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'com.example.SpringCoreDemo.common.Coach' in your configuration. 
+
+
+..............................Fifth Error.............................................................
+If project not showing maven project then
+STEP 1-> GO TO INSIDE POM.XLM
+STEP 2-> RIGHT CLICK 
+STEP 3-> ADD THIS PROJECT AS MAVEN PROJECT 
